@@ -1,0 +1,8 @@
+"Drivers/Stm32F103C8_SPI_Driver.o"
+"Drivers/Stm32_F103C6_RCC_driver.o"
+"Drivers/Stm32_F103C6_UART_driver.o"
+"Drivers/Stm32_F103C6_gpio_driver.o"
+"Src/main.o"
+"Src/syscalls.o"
+"Src/sysmem.o"
+"Startup/startup_stm32f103c6tx.o"
