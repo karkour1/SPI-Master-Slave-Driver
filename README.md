@@ -11,6 +11,24 @@ Welcome to the **SPI-Driver-Library for STM32F103C8 & ATmega32** repository! Thi
 - **Platform Specific Implementations**: Includes separate drivers optimized for STM32F103C8 and ATmega32.
 - **Cross-Platform Code Structure**: Easily portable between STM32 and AVR microcontroller families.
 
+## Overview
+
+The SPI (Serial Peripheral Interface) is a widely-used protocol for short-distance communication between microcontrollers and peripheral devices such as sensors, memory, and display modules. This driver library simplifies the process of configuring and using SPI on STM32F103C8 and ATmega32 microcontrollers by providing a comprehensive set of functions for managing SPI operations.
+
+### Platform Specific Implementations
+
+- **STM32F103C8**: This implementation leverages the powerful features of the STM32F103C8 microcontroller, providing flexibility in configuring SPI settings such as baud rate, data frame format, and clock polarity/phase.
+
+- **ATmega32**: The ATmega32 implementation is optimized for the AVR architecture, ensuring efficient SPI communication while maintaining ease of use. The driver provides functions for both master and slave configurations.
+
+### Applications
+
+This SPI driver is ideal for a variety of applications, including:
+
+- **Sensor Communication**: Interface with SPI-based sensors like accelerometers, gyroscopes, and temperature sensors.
+- **Memory Access**: Read from and write to SPI-based EEPROMs or flash memory.
+- **Display Control**: Manage SPI-based LCDs, OLEDs, or LED matrices.
+
 ## Getting Started
 
 ### Prerequisites
@@ -37,41 +55,3 @@ To use this SPI driver, you'll need:
       - `atmega32_spi_driver.h`
 
 3. Configure the SPI settings in the corresponding header file according to your hardware specifications.
-
-### Usage
-
-#### STM32F103C8 Example:
-
-1. **Initialize the SPI Interface:**
-    ```c
-    STM32_SPI_Init(SPI_Mode_Master, SPI_BaudRatePrescaler_16);
-    ```
-
-2. **Send Data:**
-    ```c
-    uint8_t dataToSend = 0x55;
-    STM32_SPI_SendData(dataToSend);
-    ```
-
-3. **Receive Data:**
-    ```c
-    uint8_t receivedData = STM32_SPI_ReceiveData();
-    ```
-
-#### ATmega32 Example:
-
-1. **Initialize the SPI Interface:**
-    ```c
-    ATmega32_SPI_Init(SPI_Mode_Master, SPI_BaudRatePrescaler_16);
-    ```
-
-2. **Send Data:**
-    ```c
-    uint8_t dataToSend = 0x55;
-    ATmega32_SPI_SendData(dataToSend);
-    ```
-
-3. **Receive Data:**
-    ```c
-    uint8_t receivedData = ATmega32_SPI_ReceiveData();
-    ```
